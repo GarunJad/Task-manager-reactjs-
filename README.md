@@ -49,6 +49,8 @@ Here is the screenshot of the website:
 
 i)Home page with tasks listed in priority:![alt text](<Screenshot 2024-11-13 194611.png>)
 
+ii)One of the task deleted with medium priority:![alt text](<Screenshot 2024-11-13 201055.png>)
+
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
