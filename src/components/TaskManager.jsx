@@ -46,7 +46,7 @@ const TaskManager = () => {
   return (
     <div className="task-manager">
       <h1 className="task-manager-heading">Task Manager</h1>
-      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <SearchBar searchTerm={searchTerm} onSearch={setSearchTerm} />
       <TaskInput addTask={addTask} />
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="task-list">
