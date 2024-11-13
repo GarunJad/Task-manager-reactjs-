@@ -39,7 +39,9 @@ Your task manager app should now be running at http://localhost:3000.
 
 ## Assumptions Made During Development
 i) Local storage is used to persist tasks, which means data will be saved between sessions but will be cleared if the browser cache is cleared.
+
 ii) The app assumes the user has basic knowledge of task management concepts (e.g., priority levels, completion toggle).
+
 iii) The UI design is kept simple for ease of use and does not include advanced animations or styling frameworks.
 
 ## Screenshots
