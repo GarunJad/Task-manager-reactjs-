@@ -56,22 +56,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 
 ### Step 6: **Add Screenshots**
-1. Take a screenshot of your app, for example, when tasks are displayed or when a task has its priority set.
-2. Upload your screenshots to your GitHub repository. Create a folder named `screenshots` in the repository to keep them organized.
-3. Add the paths to these images in your `README.md` file, like so:
+
 
 ```markdown
-![Screenshot of tasks](screenshots/screenshot1.jpg)
-Step 7: Push Your Changes
-After making the changes to README.md and adding screenshots, commit and push the changes:
-git add .
-git commit -m "Added README with setup instructions and screenshots"
-git push
-Step 8: Share the GitHub Link
-Once the repository is ready, you can share the link to your GitHub repository. It should look something like this:
-
-https://github.com/your-username/task-manager-app
-Summary of Files:
-README.md: Contains the application description, setup instructions, and screenshots.
-Commit history: Reflecting meaningful changes, such as features added or bugs fixed.
-Screenshots: Located in a screenshots/ folder for easy reference.
+![Screenshot of tasks](C:\React\Taskmanager\Task-manager\public\Screenshot 2024-11-13 194611.png)
