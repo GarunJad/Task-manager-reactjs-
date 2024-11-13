@@ -44,8 +44,8 @@ ii) The app assumes the user has basic knowledge of task management concepts (e.
 
 iii) The UI design is kept simple for ease of use and does not include advanced animations or styling frameworks.
 
-## Screenshot
-Here is the screenshot of the website:
+## Screenshots
+Here are few screenshots of the website:
 
 i)Home page with tasks listed in priority:![alt text](<Screenshot 2024-11-13 194611.png>)
 
