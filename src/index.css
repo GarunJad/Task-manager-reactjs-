@@ -1,40 +1,26 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+/* General body styling */
+body {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
   margin: 0;
+  padding: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   min-height: 100vh;
+  background-color: #e5e7eb; /* Soft background color */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Root styles for text color and background color */
+:root {
+  color-scheme: light dark;
+  background-color: #f3f4f6; /* Light background color */
 }
 
+/* General styles for input fields and buttons */
+input,
+select,
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -44,25 +30,158 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.3s ease-in-out;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+input {
+  background-color: white;
+  color: #333;
+}
+
+select {
+  background-color: white;
+  color: #333;
+}
+
+button {
+  background-color: #f97316; /* Orange */
+  color: white;
+}
+
+button:hover {
+  background-color: #ea580c; /* Darker orange */
+}
+
+/* Button for delete task */
+button.delete {
+  background-color: #ef4444; /* Red */
+}
+
+button.delete:hover {
+  background-color: #dc2626; /* Darker red */
+}
+
+/* Task Card Styles */
+.task-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: grab;
+  margin-bottom: 1em;
+  min-height: 120px;
+  text-align: center; /* Center text in task card */
+  color: #b4b7bb; /* Shining silver text color for task titles */
+}
+
+.task-card.completed {
+  background-color: rgba(34, 197, 94, 0.1); /* Light green for completed tasks */
+}
+
+.task-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Priority select styles */
+select {
+  padding: 0.5em;
+  margin-right: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+select:focus {
+  border-color: #f97316; /* Orange focus */
+}
+
+/* Task list container */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center; /* Center the task list items */
+}
+
+/* Fancy Heading */
+h1 {
+  font-size: 3em;
+  font-weight: 900;
+  background: linear-gradient(to right, #f43f5e, #fdba74, #fb923c);
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 2em;
+  text-transform: uppercase;
+}
+
+/* Input container for adding tasks */
+input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+  font-size: 1.125rem;
+  color: #333;
+  margin-right: 10px;
+}
+
+input[type="text"]:focus {
+  border-color: #f97316; /* Orange focus */
+}
+
+input[type="text"]:hover {
+  background-color: #fafafa;
+}
+
+.add-task-btn {
+  background-color: #f97316;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Add some space between input and button */
+}
+
+.add-task-btn:hover {
+  background-color: #ea580c;
+}
+
+/* Dragging styles */
+.task-card:active {
+  cursor: grabbing;
+}
+
+/* Task Manager container styles */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items in the container */
+  justify-content: center;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px; /* Set max width for responsiveness */
+}
+
+/* Button style for delete */
+button.delete {
+  background-color: #ef4444; /* Red */
+}
+
+button.delete:hover {
+  background-color: #dc2626; /* Darker red */
 }
