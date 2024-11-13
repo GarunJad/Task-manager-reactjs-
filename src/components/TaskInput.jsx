@@ -1,33 +1,31 @@
-// TaskInput.jsx
+// components/TaskInput.jsx
 import React, { useState } from 'react';
 
-function TaskInput({ addTask }) {
+const TaskInput = ({ addTask }) => {
   const [taskTitle, setTaskTitle] = useState('');
+  const [priority, setPriority] = useState('medium');
 
-  const handleChange = (e) => setTaskTitle(e.target.value);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (taskTitle.trim()) {
-      addTask(taskTitle);
-      setTaskTitle('');
-    }
+  const handleAddTask = () => {
+    addTask(taskTitle, priority);
+    setTaskTitle('');
   };
 
   return (
-    <form onSubmit={handleSubmit} className="task-input-form">
+    <div className="task-input">
       <input
         type="text"
         value={taskTitle}
-        onChange={handleChange}
-        placeholder="Enter a new task"
-        className="task-input"
+        onChange={(e) => setTaskTitle(e.target.value)}
+        placeholder="Enter task..."
       />
-      <button type="submit" className="add-task">
-        Add Task
-      </button>
-    </form>
+      <select value={priority} onChange={(e) => setPriority(e.target.value)}>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <button onClick={handleAddTask}>Add Task</button>
+    </div>
   );
-}
+};
 
 export default TaskInput;
