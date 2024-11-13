@@ -44,12 +44,11 @@ ii) The app assumes the user has basic knowledge of task management concepts (e.
 
 iii) The UI design is kept simple for ease of use and does not include advanced animations or styling frameworks.
 
-## Screenshots
-Here are some screenshots of the application:
+## Screenshot
+Here is the screenshot of the website:
 
-i)Home page with tasks listed:
+i)Home page with tasks listed:![alt text](<Screenshot 2024-11-13 194611.png>)
 
-ii)Task with a priority selector:
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
