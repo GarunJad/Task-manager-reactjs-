@@ -50,27 +50,27 @@ Here are few screenshots of the website:
 i)Home page with tasks listed in priority:
 
 ![alt text](<Screenshot 2024-11-14 033651.png>)
----
+-------------------------------------------------
 ii)Marked a task as completed:
 
 ![alt text](<Screenshot 2024-11-14 033839.png>)
----
+-------------------------------------------------
 iii)One of the task deleted with high priority:
 
 ![alt text](<Screenshot 2024-11-14 033935.png>)
----
+-------------------------------------------------
 iv)Drop Down menu for changing priority(after being added):
 
 ![alt text](<Screenshot 2024-11-13 201056.png>)
----
+-------------------------------------------------
 v)Searching and getting results:
 
 ![alt text](<Screenshot 2024-11-14 034222.png>)
----
+-------------------------------------------------
 vi)Adding a new task(Running) with a particular priority:
 
 ![alt text](<Screenshot 2024-11-14 034343.png>)
----
+-------------------------------------------------
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
