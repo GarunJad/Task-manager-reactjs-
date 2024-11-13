@@ -47,7 +47,7 @@ iii) The UI design is kept simple for ease of use and does not include advanced 
 ## Screenshot
 Here is the screenshot of the website:
 
-i)Home page with tasks listed:![alt text](<Screenshot 2024-11-13 194611.png>)
+i)Home page with tasks listed in priority:![alt text](<Screenshot 2024-11-13 194611.png>)
 
 
 License
