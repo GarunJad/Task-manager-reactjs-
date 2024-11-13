@@ -46,36 +46,43 @@ iii) The UI design is kept simple for ease of use and does not include advanced 
 
 ## Screenshots
 Here are few screenshots of the website:
----
+
+***
 1. Home page with tasks listed in priority:
 
 ![alt text](<Screenshot 2024-11-14 033651.png>)
--------------------------------------------------
+
+***
 
 2. Marked a task as completed:
 
 ![alt text](<Screenshot 2024-11-14 033839.png>)
--------------------------------------------------
+
+***
 
 3. One of the task deleted with high priority:
 
 ![alt text](<Screenshot 2024-11-14 033935.png>)
--------------------------------------------------
+
+***
 
 4. Drop Down menu for changing priority(after being added):
 
 ![alt text](<Screenshot 2024-11-13 201056.png>)
--------------------------------------------------
+
+***
 
 5. Searching and getting results:
 
 ![alt text](<Screenshot 2024-11-14 034222.png>)
--------------------------------------------------
+
+***
 
 6. Adding a new task(Running) with a particular priority:
 
 ![alt text](<Screenshot 2024-11-14 034343.png>)
--------------------------------------------------
+
+***
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
