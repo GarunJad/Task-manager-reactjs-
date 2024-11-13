@@ -53,9 +53,3 @@ i)Home page with tasks listed:![alt text](<Screenshot 2024-11-13 194611.png>)
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-
-### Step 6: **Add Screenshots**
-
-
-```markdown
-![Screenshot of tasks](C:\React\Taskmanager\Task-manager\public\Screenshot 2024-11-13 194611.png)
