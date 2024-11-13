@@ -1,10 +1,9 @@
-// components/TaskManager.jsx
 import React, { useState } from 'react';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import TaskInput from './TaskInput.jsx';
 import TaskCard from './TaskCard.jsx';
 import SearchBar from './SearchBar.jsx';
-import { priorityMap } from '../utils/taskUtils.jsx';
+import { priorityMap } from '../utils/taskUtils.jsx'; 
 
 const TaskManager = () => {
   const [tasks, setTasks] = useState([
@@ -14,25 +13,39 @@ const TaskManager = () => {
   ]);
   const [searchTerm, setSearchTerm] = useState('');
 
+  // Add a new task
   const addTask = (taskTitle, priority) => {
     if (!taskTitle.trim()) return;
     const newTask = { id: Date.now().toString(), title: taskTitle, completed: false, priority };
     setTasks([...tasks, newTask]);
   };
 
-  const deleteTask = (id) => setTasks(tasks.filter(task => task.id !== id));
+  // Delete a task
+  const deleteTask = (id) => {
+    setTasks(tasks.filter(task => task.id !== id));
+  };
 
-  const toggleComplete = (id) => setTasks(
-    tasks.map(task => task.id === id ? { ...task, completed: !task.completed } : task)
-  );
+  // Toggle task completion
+  const toggleComplete = (id) => {
+    setTasks(tasks.map(task => 
+      task.id === id ? { ...task, completed: !task.completed } : task
+    ));
+  };
 
-  const changePriority = (id, newPriority) => setTasks(
-    tasks.map(task => task.id === id ? { ...task, priority: newPriority } : task)
-  );
+  // Change priority of a task
+  const changePriority = (id, newPriority) => {
+    setTasks(tasks.map(task => 
+      task.id === id ? { ...task, priority: newPriority } : task
+    ));
+  };
 
+  // Sort tasks by priority
   const sortedTasks = [...tasks].sort((a, b) => priorityMap[a.priority] - priorityMap[b.priority]);
+
+  // Filter tasks based on search term
   const filteredTasks = sortedTasks.filter(task => task.title.toLowerCase().includes(searchTerm.toLowerCase()));
 
+  // Handle drag and drop for task reordering
   const onDragEnd = (result) => {
     const { destination, source } = result;
     if (!destination) return;
@@ -46,8 +59,14 @@ const TaskManager = () => {
   return (
     <div className="task-manager">
       <h1 className="task-manager-heading">Task Manager</h1>
+      
+      {/* Search Bar */}
       <SearchBar searchTerm={searchTerm} onSearch={setSearchTerm} />
+
+      {/* Add Task Input */}
       <TaskInput addTask={addTask} />
+
+      {/* Drag and Drop for Tasks */}
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="task-list">
           {(provided) => (
@@ -57,9 +76,9 @@ const TaskManager = () => {
                   key={task.id}
                   task={task}
                   index={index}
-                  deleteTask={deleteTask}
-                  toggleComplete={toggleComplete}
-                  changePriority={changePriority}
+                  onDelete={deleteTask}
+                  onToggleComplete={toggleComplete}
+                  onChangePriority={changePriority}  
                 />
               ))}
               {provided.placeholder}
