@@ -109,6 +109,10 @@ Here are few screenshots of the website:
 
 ***
 
+7. Added the scrolling function on webpage:
+
+![alt text](<scrolling screenshot.png>)
+
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
